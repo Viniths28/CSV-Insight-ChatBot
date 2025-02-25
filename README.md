@@ -1,3 +1,15 @@
+# CSV-Insight-Chatbot
+
+CSV-Insight-Chatbot is an AI-powered conversational assistant designed to answer questions about the CSV contents. 
+It utilizes **Retrieval-Augmented Generation (RAG)** with **ChromaDB** as a vector database and **OpenAI's GPT model** for intelligent responses.
+
+## **Features**
+- Uses **ChromaDB** for vector storage.
+- **Retrieval-Augmented Generation (RAG)** for enhanced responses.
+- Supports **CSV file ingestion** for knowledge base creation.
+- **Streamlit UI** for an interactive chatbot experience.
+
+---
 
 ## Installation
 To run this project locally, follow these steps:
