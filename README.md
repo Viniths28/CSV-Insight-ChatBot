@@ -31,9 +31,28 @@ Make sure to replace `your_openai_api_key_here` with your actual OpenAI API key.
 Data Ingestion (Run Once)
 
 Before starting the chatbot, load the CSV data into ChromaDB (only once):
+
 ```sh
 python csv_data.py
 ```
+Debugging and Managing ChromaDB Collections
+List Collections: Use `listcollections` to view all collections in the ChromaDB database.
+
+```sh
+python listcollections.py  
+```
+Verify Collection Contents: Use `verifycollections.py` to inspect the metadata and contents of a specific collection.
+
+```sh
+python verifycollections.py  
+```
+Remove Unwanted Collections: Use removecollections.py `removecollections.py`  to delete any unwanted collections from the ChromaDB database.
+
+```sh
+python removecollections.py  
+```
+Start the Chatbot
+
 After running csv_data.py, start the chatbot with:
 ```sh
 streamlit run chatbot.py
@@ -48,6 +67,10 @@ This will launch the chatbot in your browser.
 │   ├── chroma_db/           # ChromaDB persistent storage
 │   ├── chatbot.py           # Main Streamlit app
 │   ├── CSV_data.py          # Script to load CSV data into ChromaDB
+│   ├── requirements.txt     # List of dependencies
+│   ├── listcollections.py   # Script to list all collections in ChromaDB
+│   ├── verifycollections.py # Script to verify metadata and contents of a collection
+│   ├── removecollections.py # Script to remove unwanted collections from ChromaDB
 │   ├── requirements.txt     # List of dependencies
 │   ├── .env                 # Environment variables (not tracked in Git)
 │   ├── README.md            # Project documentation
